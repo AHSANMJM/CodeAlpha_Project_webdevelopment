@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #006666;
+}
+
+.box {
+    position: relative;
+    width: 450px;
+    height: 550px;
+    border-radius: 30px;
+    padding: 30px 50px;
+    background: #009999;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+                10px 10px 70px rgba(0, 0, 0, 0.5),
+                inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+                inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+                inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+
+h2 {
+    font-weight: 600;
+    text-align: center;
+    color: aliceblue;
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
+#inputBx {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    
+}
+
+.box .list li {
+    position: relative;
+    width: calc(100% - 45px);
+    display: flex;
+    align-items: center;
+    background: #1f83f2;
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 25px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 22.5px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.box .list li i {
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff0099;
+    border-radius: 50%;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box .list li i::before,
+.box .list li i::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #fff;
+}
+
+.box .list li i::before {
+    transform: rotate(45deg);
+}
+
+.box .list li i::after {
+    transform: rotate(-45deg);
+}
+
+.box .list li.done {
+    background: #088282;
+}
+
+.box .list li::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: #006666;
+    border-radius: 50%;
+}
+
+.box .list li.done::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    transform: rotate(315deg);
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.list {
+    margin-top: 20px;
+    height: 350px;
+    overflow-y: auto;
+    padding-right: 1px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: #fff;
+}
